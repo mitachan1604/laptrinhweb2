@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Đăng nhập</title>
+  <title>Đăng ký</title>
 </head>
 <style>
     *{
@@ -46,7 +46,7 @@
         border-radius: 3px 3px;
     }
 
-    .btn-login{
+    .btn-register{
         background-color: #0e5ce3;
         color: white;
         padding: 10px;
@@ -88,7 +88,7 @@
         <div class="main">
             <form action="/login" method="post" class="login-form">
                 <table class="tbl-login">
-                    <caption>Màn hình đăng nhập</caption>
+                    <caption>Màn hình đăng ký</caption>
                     <tbody>
                         <tr>
                             <td><label for="username">Username</label></td>
@@ -99,12 +99,16 @@
                             <td><input class="input-login" type="password" name="password" id="password"></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><input type="checkbox" id="remember" name="remember"><label for="remember">Ghi nhớ đăng nhập</label><br></td>
+                            <td><label for="repassword">Nhập lại mật khẩu</label></td>
+                            <td><input class="input-login" type="password" name="repassword" id="repassword"></td>
                         </tr>
                         <tr>
-                            <td><a href=#>Quên mật khẩu</a></td>
-                            <td><button type="submit" class="btn-login">Đăng nhập</button></td>
+                            <td><label for="email">Email</label></td>
+                            <td><input class="input-login" type="text" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td><a href=#>Đã có tài khoản</a></td>
+                            <td><button type="submit" class="btn-register">Đăng ký</button></td>
                         </tr>
                     </tbody>
                 </table>
