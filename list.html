@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .box-content{
+        border: 1px solid black;
+        width: 100%;
+        height: 35px;
+    }
+
+    .main{
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-form{
+        border: 1px solid black;
+        width: 60%;
+        height: 400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .tbl-login{
+        margin: 0 auto;
+        width: 50%;
+        height: 47%;    
+    }
+
+    .tbl-login tr td .input-login{
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 3px 3px;
+    }
+
+    .btn-login{
+        background-color: #0e5ce3;
+        color: white;
+        padding: 10px;
+        border-radius: 5px 5px;
+        border: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    ul{
+        list-style-type: none;
+        display: inline-flex;
+    }
+    ul li{
+        padding: 3px;
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div>
+        <header class="box-content">
+            <ul>
+                <li>Home</li>
+                <li>Đăng nhập</li>
+                <li>Đăng ký</li>
+            </ul>
+        </header>
+        <div class="main">
+            <form action="/login" method="post" class="login-form">
+                <table class="tbl-login">
+                    <caption>Màn hình đăng nhập</caption>
+                    <tbody>
+                        <tr>
+                            <td><label for="username">Username</label></td>
+                            <td><input class="input-login" type="text" name="username" id="username"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Mật khẩu</label></td>
+                            <td><input class="input-login" type="password" name="password" id="password"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" id="remember" name="remember"><label for="remember">Ghi nhớ đăng nhập</label><br></td>
+                        </tr>
+                        <tr>
+                            <td><a href=#>Quên mật khẩu</a></td>
+                            <td><button type="submit" class="btn-login">Đăng nhập</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <footer class="box-content">
+            <p>Lập trình web @01/2024</p>
+        </footer>
+    </div>
+</body>
+</html>
