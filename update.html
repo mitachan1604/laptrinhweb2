@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Đăng nhập</title>
+  <title>Cập nhật</title>
 </head>
 <style>
     *{
@@ -24,7 +24,7 @@
         justify-content: center;
     }
 
-    .login-form{
+    .register-form{
         border: 1px solid black;
         width: 60%;
         height: 400px;
@@ -33,25 +33,26 @@
         align-items: center;
     }
 
-    .tbl-login{
+    .tbl-register{
         margin: 0 auto;
         width: 50%;
-        height: 47%;    
+        height: 67%;    
     }
 
-    .tbl-login tr td .input-login{
+    .tbl-register tr td .input-login{
         width: 100%;
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 3px 3px;
     }
 
-    .btn-login{
+    .btn-register{
         background-color: #0e5ce3;
         color: white;
         padding: 10px;
         border-radius: 5px 5px;
         border: none;
+        margin-left: 5px;
     }
 
     a{
@@ -69,48 +70,68 @@
     .header{
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .footer{
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    .form-title{
+        margin-bottom: 10px;
+    }
+
+    .item-menu{
+        border-right: 1px solid black;
+        padding: 5px;
+        color: black;
+    }
+
+    .active{
+        font-weight: bold;
     }
 </style>
 <body>
     <div>
-        <header class="box-content">
+        <header class="header box-content">
             <ul>
-                <li>Home</li>
-                <li>Đăng nhập</li>
-                <li>Đăng ký</li>
+                <li><a class="item-menu" href="#">Home</a></li>
+                <li><a class="item-menu" href="#">Đăng nhập</a></li>
+                <li><a class="item-menu active" href="#">Đăng ký</a></li>
             </ul>
         </header>
         <div class="main">
-            <form action="/login" method="post" class="login-form">
-                <table class="tbl-login">
-                    <caption>Màn hình đăng nhập</caption>
+            <form action="/login" method="post" class="register-form">
+                <table class="tbl-register">
+                    <caption class="form-title"><h3>Màn hình cập nhật</h3></caption>
                     <tbody>
                         <tr>
                             <td><label for="username">Username</label></td>
-                            <td><input class="input-login" type="text" name="username" id="username"></td>
+                            <td><input class="input-login" type="text" name="username" id="username" value="XXX"></td>
                         </tr>
                         <tr>
                             <td><label for="password">Mật khẩu</label></td>
-                            <td><input class="input-login" type="password" name="password" id="password"></td>
+                            <td><input class="input-login" type="password" name="password" id="password" value="XXX"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="repassword">Nhập lại mật khẩu</label></td>
+                            <td><input class="input-login" type="password" name="repassword" id="repassword" value="XXX"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input class="input-login" type="text" name="email" id="email" value="XXX"></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="checkbox" id="remember" name="remember"><label for="remember">Ghi nhớ đăng nhập</label><br></td>
-                        </tr>
-                        <tr>
-                            <td><a href=#>Quên mật khẩu</a></td>
-                            <td><button type="submit" class="btn-login">Đăng nhập</button></td>
+                            <td><a href=#>Đã có tài khoản</a><button type="submit" class="btn-register">Đăng ký</button></td>
                         </tr>
                     </tbody>
                 </table>
             </form>
         </div>
-        <footer class="box-content">
+        <footer class="footer box-content">
             <p>Lập trình web @01/2024</p>
         </footer>
     </div>

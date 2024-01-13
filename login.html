@@ -52,6 +52,7 @@
         padding: 10px;
         border-radius: 5px 5px;
         border: none;
+        margin-left: 5px;
     }
 
     a{
@@ -69,26 +70,42 @@
     .header{
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .footer{
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    .form-title{
+        margin-bottom: 10px;
+    }
+
+    .item-menu{
+        border-right: 1px solid black;
+        padding: 5px;
+        color: black;
+    }
+
+    .active{
+        font-weight: bold;
     }
 </style>
 <body>
     <div>
-        <header class="box-content">
+        <header class="header box-content">
             <ul>
-                <li>Home</li>
-                <li>Đăng nhập</li>
-                <li>Đăng ký</li>
+                <li><a class="item-menu" href="#">Home</a></li>
+                <li><a class="item-menu active" href="#">Đăng nhập</a></li>
+                <li><a class="item-menu" href="#">Đăng ký</a></li>
             </ul>
         </header>
         <div class="main">
             <form action="/login" method="post" class="login-form">
                 <table class="tbl-login">
-                    <caption>Màn hình đăng nhập</caption>
+                    <caption class="form-title"><h3>Màn hình đăng nhập</h3></caption>
                     <tbody>
                         <tr>
                             <td><label for="username">Username</label></td>
@@ -103,14 +120,14 @@
                             <td><input type="checkbox" id="remember" name="remember"><label for="remember">Ghi nhớ đăng nhập</label><br></td>
                         </tr>
                         <tr>
-                            <td><a href=#>Quên mật khẩu</a></td>
-                            <td><button type="submit" class="btn-login">Đăng nhập</button></td>
+                            <td></td>
+                            <td><a href=#>Quên mật khẩu</a><button type="submit" class="btn-login">Đăng nhập</button></td>
                         </tr>
                     </tbody>
                 </table>
             </form>
         </div>
-        <footer class="box-content">
+        <footer class="footer box-content">
             <p>Lập trình web @01/2024</p>
         </footer>
     </div>

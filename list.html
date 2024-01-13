@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Đăng nhập</title>
+  <title>Danh sách</title>
 </head>
 <style>
     *{
@@ -24,7 +24,7 @@
         justify-content: center;
     }
 
-    .login-form{
+    .register-form{
         border: 1px solid black;
         width: 60%;
         height: 400px;
@@ -33,25 +33,26 @@
         align-items: center;
     }
 
-    .tbl-login{
+    .tbl-register{
         margin: 0 auto;
         width: 50%;
-        height: 47%;    
+        height: 67%;    
     }
 
-    .tbl-login tr td .input-login{
+    .tbl-register tr td .input-login{
         width: 100%;
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 3px 3px;
     }
 
-    .btn-login{
+    .btn-register{
         background-color: #0e5ce3;
         color: white;
         padding: 10px;
         border-radius: 5px 5px;
         border: none;
+        margin-left: 5px;
     }
 
     a{
@@ -69,48 +70,188 @@
     .header{
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .footer{
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    .form-title{
+        margin-bottom: 10px;
+    }
+
+    .item-menu, .item-action{
+        border-right: 1px solid black;
+        padding: 5px;
+        color: black;
+    }
+
+    .active{
+        font-weight: bold;
+    }
+
+    table{
+        border: 1px solid black;
+    }
+
+    table th{
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    table td{
+        border-right: 1px solid black;
+    }
+
+    .break-line{
+        border-right: 1px solid black;
     }
 </style>
 <body>
     <div>
-        <header class="box-content">
+        <header class="header box-content">
             <ul>
-                <li>Home</li>
-                <li>Đăng nhập</li>
-                <li>Đăng ký</li>
+                <li><a class="item-menu break-line" href="#">Home</a></li>
+                <li><a class="item-menu active" href="#">Đăng xuất</a></li>
             </ul>
         </header>
         <div class="main">
-            <form action="/login" method="post" class="login-form">
-                <table class="tbl-login">
-                    <caption>Màn hình đăng nhập</caption>
-                    <tbody>
-                        <tr>
-                            <td><label for="username">Username</label></td>
-                            <td><input class="input-login" type="text" name="username" id="username"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="password">Mật khẩu</label></td>
-                            <td><input class="input-login" type="password" name="password" id="password"></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="checkbox" id="remember" name="remember"><label for="remember">Ghi nhớ đăng nhập</label><br></td>
-                        </tr>
-                        <tr>
-                            <td><a href=#>Quên mật khẩu</a></td>
-                            <td><button type="submit" class="btn-login">Đăng nhập</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
+            <table class="tbl-register">
+                <caption class="form-title"><h3>Danh sách user</h3></caption>
+                <tbody>
+                    <tr class="header-table">
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Thao tác</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>UPVH</td>
+                        <td>ATJW@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>IFUK</td>
+                        <td>KULB@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>DZZQ</td>
+                        <td>ERNB@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>NJYY</td>
+                        <td>ROIF@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>YUMG</td>
+                        <td>KITN@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>WZSU</td>
+                        <td>CVTL@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>WXFQ</td>
+                        <td>MIUZ@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>XZOR</td>
+                        <td>YZLV@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>HGGO</td>
+                        <td>OYYX@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>PXZX</td>
+                        <td>YSML@gmail.com</td>
+                        <td>
+                            <ul>
+                                <li><a class="item-action" href="#">Edit</a></li>
+                                <li><a class="item-action" href="#">View</a></li>
+                                <li><a class="item-action" href="#">Delete</a></li>
+                            </ul>
+                        <td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <footer class="box-content">
+        <footer class="footer box-content">
             <p>Lập trình web @01/2024</p>
         </footer>
     </div>

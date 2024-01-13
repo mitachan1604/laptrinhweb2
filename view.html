@@ -52,6 +52,7 @@
         padding: 10px;
         border-radius: 5px 5px;
         border: none;
+        margin-left: 5px;
     }
 
     a{
@@ -69,48 +70,62 @@
     .header{
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .footer{
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    .form-title{
+        margin-bottom: 10px;
+    }
+
+    .item-menu{
+        padding: 5px;
+        color: black;
+    }
+
+    .active{
+        font-weight: bold;
+    }
+
+    .break-line{
+        border-right: 1px solid black;
     }
 </style>
 <body>
     <div>
-        <header class="box-content">
+        <header class="header box-content">
             <ul>
-                <li>Home</li>
-                <li>Đăng nhập</li>
-                <li>Đăng ký</li>
+                <li><a class="item-menu break-line" href="#">Home</a></li>
+                <li><a class="item-menu active" href="#">Đăng xuất</a></li>
             </ul>
         </header>
         <div class="main">
             <form action="/login" method="post" class="login-form">
                 <table class="tbl-login">
-                    <caption>Màn hình đăng nhập</caption>
+                    <caption class="form-title"><h3>Màn hình chi tiết</h3></caption>
                     <tbody>
                         <tr>
                             <td><label for="username">Username</label></td>
-                            <td><input class="input-login" type="text" name="username" id="username"></td>
+                            <td><input class="input-login" type="text" name="username" id="username" value="test1"></td>
                         </tr>
                         <tr>
-                            <td><label for="password">Mật khẩu</label></td>
-                            <td><input class="input-login" type="password" name="password" id="password"></td>
+                            <td><label for="email">Email</label></td>
+                            <td><input class="input-login" type="text" name="email" id="email" value="email@gmail.com"></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="checkbox" id="remember" name="remember"><label for="remember">Ghi nhớ đăng nhập</label><br></td>
-                        </tr>
-                        <tr>
-                            <td><a href=#>Quên mật khẩu</a></td>
-                            <td><button type="submit" class="btn-login">Đăng nhập</button></td>
+                            <td><button type="submit" class="btn-login">Chỉnh sửa</button></td>
                         </tr>
                     </tbody>
                 </table>
             </form>
         </div>
-        <footer class="box-content">
+        <footer class="footer box-content">
             <p>Lập trình web @01/2024</p>
         </footer>
     </div>
